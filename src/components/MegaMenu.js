@@ -52,9 +52,9 @@ class MegaMenu extends Component {
         ]
     },
     {
-        name: 'Features',
+        name: 'Counter',
         icon: 'fa-car',
-        route: '/features'
+        route: '/counter'
     },
     {
         name: 'Currency',
@@ -66,6 +66,7 @@ class MegaMenu extends Component {
         this.props.initialize(this.navItems);
     }
     backButton(){
+        console.log(this.props);
         if(this.props.layout.previousNavItems.length > 0 && this.props.layout.navButtonActive){
             return (
                 <div className="navbar-header">

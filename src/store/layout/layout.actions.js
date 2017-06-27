@@ -3,6 +3,7 @@
  */
 
 import {INITIALIZE, MENU_BACK, MENU_FORWARD, TOGGLE_NAV} from "./layout.constants";
+import {push} from "react-router-redux";
 export function toggleNav() {
     return {
         type: TOGGLE_NAV
@@ -37,6 +38,7 @@ export function menuItemActivate(item) {
         else{
             dispatch(toggleNav());
             //route to component here then toggle nav
+            dispatch(push(item.route));
         }
     }
 }
